@@ -48,17 +48,22 @@ CREATE TABLE CUSTOMER_TBL(
     5. 테이블 이름      : ALTER TABLE 테이블명 RENAME TO 신규테이블명
     6. PK/FK제약조건    :  
         1) PK
-            (1) 추가    :
+            (1) 추가     :
                 ALTER TABLE 테이블명 ADD CONSTRAINT 제약조건명 PRIMARY KEY(칼럼)
-            (2) 삭제    : 
+            (2) 삭제     : 
                 ALTER TABLE 테이블명 DROP CONSTRAITNT 제약조건명
                 ALTER TABLE 테이블명 DROP PRIMARY KEY (테이블당 PK는 하나뿐이니깐)
         2) FK
-            (1) 추가    : 
+            (1) 추가     : 
                 ALTER TABLE 자식테이블명 ADD CONSTRAINT 제약조건명 FOREIGN KEY(칼럼) REFERENCES 부모테이블명(참조할칼럼)
-            (2) 삭제    :
+            (2) 삭제     :
                 ALTER TABLE 테이블명 DROP CONSTRAINT 제약조건명  
-  */
+            (3) 일시중지 :
+                ALTER TABLE 테이블명 DISABLE CONSTRAINT 제약조건명
+            (4) 활성화   :
+                ALTER TABLE 테이블명 ENABLE  CONSTRAINT 제약조건명
+              
+*/
   
 --1. 은행 테이블에 연락처(BANK_TEL) 칼럼을 추가하시오.
 ALTER TABLE BANK_TBL ADD BANK_TEL VARCHAR2(15BYTE) NOT NULL;
