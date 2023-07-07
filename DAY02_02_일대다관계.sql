@@ -9,7 +9,7 @@
     */
     
     /*삭제 옵션
-      1. ON DELETE CASCADE  : 외래키가 참조하는 기본키 값이 삭제되면 외래키도 함께 삭제된다.
+      1. ON DELETE CASCADE  : 외래키가 참조하는 기본키 값이 삭제되면 외래키도 함께 삭제된다. not null 일때
       2. ON DELETE SET NULL : 외래키가 참조하는 기본키 값이 삭제되면 외래키를 NULL로 처리한다.    
     */
     --자식 먼저 지우기
