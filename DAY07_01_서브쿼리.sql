@@ -33,7 +33,7 @@ SELECT *
   FROM EMPLOYEES 
  WHERE DEPARTMENT_ID IN(50, 60);
  
- /* WHER 절의 서브쿼리*/
+ /* WHERE 절의 서브쿼리*/
 -- 1. 사원번호가 101인 사원의직업과 동일한 직업을 가진 사원을 조회하기
 --SELECT * 
 --  FROM EMPLOYEES 
@@ -142,3 +142,6 @@ SELECT E.EMPLOYEE_ID
            AND D.DEPARTMENT_ID = 50) AS DEPT_NAME
           FROM EMPLOYEES E;
 
+SELECT DEPARTMENT_NAME
+          FROM DEPARTMENTS
+         WHERE DEPARTMENT_ID = 50
