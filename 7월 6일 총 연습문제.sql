@@ -247,7 +247,7 @@ SELECT U.USER_NAME AS 고객명
   FROM USER_T U INNER JOIN BUY_T B
     ON U.USER_NO = B.USER_NO
  GROUP BY U.USER_NO, U.USER_NAME                  --번화이름이 같아야 같은사람이다.
-HAVING COUNT(B.BUY_NO) > = 2Z;
+HAVING COUNT(B.BUY_NO) > = 2;
 
 -- 15. 어떤 고객이 어떤 제품을 구매했는지 조회하시오. 구매 이력이 없는 고객도 조회하고 아이디로 오름차순 정렬하시오.
 -- 고객명   구매제품
